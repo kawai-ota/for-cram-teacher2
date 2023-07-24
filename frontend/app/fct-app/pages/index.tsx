@@ -9,7 +9,7 @@ export default function Home() {
           Your browser does not support the video tag.
         </video>
         <div className={styles.text_overlay}>
-          <h1>for cram teacher</h1>
+          <h1>For Cram Teacher</h1>
           <h2>〜全ての塾の先生へ〜</h2>
           <Link href="/signin" legacyBehavior>
             <a className={styles.button}>
