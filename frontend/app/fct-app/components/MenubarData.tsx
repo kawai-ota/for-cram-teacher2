@@ -1,4 +1,5 @@
 import React from 'react'
+import PersonIcon from '@mui/icons-material/Person';
 import HomeIcon from '@mui/icons-material/Home';
 import GroupIcon from '@mui/icons-material/Group';
 import EmailIcon from '@mui/icons-material/Email';
@@ -8,7 +9,12 @@ export const MenubarData = [
     {
         title:"ホーム",
         icon:<HomeIcon/>,
-        link:'/mypage/home',
+        link:'/main',
+    },
+    {
+        title:"マイ",
+        icon:<PersonIcon/>,
+        link:'/mypage/home'
     },
     {
         title:"チーム",
