@@ -6,7 +6,9 @@ const memo = () => {
   return (
     <>
        <Menubar/>
-       <Background/>
+       <Background>
+        
+      </Background>
     </>
   )
 }

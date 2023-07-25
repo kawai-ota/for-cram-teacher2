@@ -6,7 +6,9 @@ const mycalender = () => {
   return (
     <>
        <Menubar/>
-       <Background/>
+       <Background>
+        
+      </Background>
     </>
   )
 }

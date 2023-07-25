@@ -6,7 +6,9 @@ const mytask = () => {
   return (
     <>
        <Menubar/>
-       <Background/>
+       <Background>
+        
+      </Background>
     </>
   )
 }

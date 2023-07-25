@@ -6,7 +6,8 @@ const paid = () => {
   return (
     <>
        <Menubar/>
-       <Background/>
+       <Background>
+        </Background>
     </>
   )
 }

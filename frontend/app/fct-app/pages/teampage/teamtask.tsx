@@ -6,7 +6,8 @@ const teamtask = () => {
   return (
     <>
        <Menubar/>
-       <Background/>
+       <Background>
+        </Background>
     </>
   )
 }

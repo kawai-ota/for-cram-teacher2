@@ -6,7 +6,8 @@ const teammemo = () => {
   return (
     <>
        <Menubar/>
-       <Background/>
+       <Background>
+        </Background>
     </>
   )
 }

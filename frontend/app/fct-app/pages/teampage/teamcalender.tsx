@@ -6,7 +6,8 @@ const teamcalender = () => {
   return (
     <>
        <Menubar/>
-       <Background/>
+       <Background>
+        </Background>
     </>
   )
 }

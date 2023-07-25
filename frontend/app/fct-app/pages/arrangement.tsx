@@ -6,7 +6,9 @@ const arrangement = () => {
   return (
     <>
        <Menubar/>
-       <Background/>
+       <Background>
+        
+      </Background>
     </>
   )
 }
