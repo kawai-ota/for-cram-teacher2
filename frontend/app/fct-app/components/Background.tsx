@@ -1,9 +1,15 @@
-import React from 'react'
+import React,{ReactNode} from 'react'
 import styles from '../styles/background.module.css'
 
-const Background = () => {
+interface BackgroundProps {
+  children:ReactNode;
+}
+
+const Background = ({children}:BackgroundProps) => {
   return (
-    <div className={styles.container}></div>
+    <div className={styles.container}>
+      {children}
+    </div>
   )
 }
 

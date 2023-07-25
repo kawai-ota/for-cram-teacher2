@@ -7,6 +7,9 @@ interface MenubarItem {
   icon:JSX.Element;
   link:string;
 }
+interface NestedMenubarItem extends MenubarItem {
+  nestedItems?: MenubarItem[];
+}
 
 const Menubar = () => {
   return (

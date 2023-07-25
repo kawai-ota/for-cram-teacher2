@@ -6,7 +6,9 @@ const home = () => {
   return (
     <>
        <Menubar/>
-       <Background/>
+       <Background>
+           <div></div>
+        </Background>
     </>
   )
 }
