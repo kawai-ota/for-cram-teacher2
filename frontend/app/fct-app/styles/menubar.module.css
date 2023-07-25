@@ -1,0 +1,25 @@
+/* styles.css もしくは Menubarコンポーネントのスタイルシートに追加 */
+
+.MenubarList {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+    border-bottom:1px solid #2864F0;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .icon {
+    margin-left: 33px;
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+  }
+  

@@ -1,12 +1,12 @@
-import React from 'react'
-import Menubar from '../components/Menubar'
+import React from 'react';
+import Menubar from '../components/Menubar';
 
-const main = () => {
+const Main = () => {
   return (
-    <div>
+    <>
       <Menubar/>
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default main
+export default Main;
