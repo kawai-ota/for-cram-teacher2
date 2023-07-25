@@ -1,8 +1,13 @@
 import React from 'react'
+import Background from '../../components/Background'
+import Menubar from '@/components/Menubar'
 
 const mytask = () => {
   return (
-    <div>mytask</div>
+    <>
+       <Menubar/>
+       <Background/>
+    </>
   )
 }
 

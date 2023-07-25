@@ -1,8 +1,13 @@
 import React from 'react'
+import Background from '../components/Background'
+import Menubar from '@/components/Menubar'
 
 const arrangement = () => {
   return (
-    <div>arrangement</div>
+    <>
+       <Menubar/>
+       <Background/>
+    </>
   )
 }
 
