@@ -1,0 +1,68 @@
+.video_container {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.text_overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* 追加：テキストを中央揃えにする */
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text_overlay h1 {
+  margin-bottom: 10px; /* 追加：h1の下に余白を設定 */
+}
+
+.text_overlay h2 {
+  margin-top: 10px; /* 追加：h2の上に余白を設定 */
+}
+
+/* ボタンのスタイルをカスタマイズ */
+.text_overlay button {
+  margin-left: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out;
+  display: inline-block; /* 追加：ボタンをインラインブロック要素にする */
+}
+
+.text_overlay button:hover {
+  background-color: #0056b3;
+}
+
+.text_overlay button:active {
+  background-color: #003079;
+}
+
+.text_overlay button:focus {
+  outline: none;
+}
+
+/* ボタンのアイコンを追加 */
+.text_overlay button::before {
+  content: "\f061"; /* Font Awesomeのアイコンコード（この例では「fas fa-arrow-right」アイコン） */
+  font-family: "Font Awesome 5 Free";
+  margin-right: 8px;
+}
+
+/* ボタンのテキストを中央揃えに */
+.text_overlay button span {
+  vertical-align: middle;
+}
