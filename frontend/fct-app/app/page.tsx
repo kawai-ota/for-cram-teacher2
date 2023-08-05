@@ -11,7 +11,7 @@ export default function Home() {
         <div className={styles.text_overlay}>
           <h1>For Cram Teacher</h1>
           <h2>〜全ての塾の先生へ〜</h2>
-          <Link href="/team">
+          <Link href="/teampage">
             <button className={styles.button}>新規登録はこちら</button>
           </Link>
           <Link href="/main">
