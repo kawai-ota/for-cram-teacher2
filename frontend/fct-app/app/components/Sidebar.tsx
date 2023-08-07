@@ -23,7 +23,7 @@ const Sidebar = () => {
   // リンクがアクティブかどうかをチェックする関数
   const isLinkActive = (link: string) => {
     const currentUrl = getCurrentUrl();
-    return currentUrl === `/${link}`;
+    return currentUrl === `${link}`;
   };
 
   return (
@@ -54,14 +54,14 @@ const Sidebar = () => {
                 </p>
                 {item.links.map((link) => (
                   <Link
-                    href={`/${link.link}`}
+                    href={`${link.link}`}
                     key={link.name}
                     className={`${
                       isLinkActive(link.link) ? activeLink : normalLink
                     }`}
                   >
                     {link.icon}
-                    <span className="capitalize">{link.name}</span>
+                    <span>{link.name}</span>
                   </Link>
                 ))}
               </div>

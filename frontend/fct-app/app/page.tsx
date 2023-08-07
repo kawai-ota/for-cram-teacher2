@@ -11,10 +11,10 @@ export default function Home() {
         <div className={styles.text_overlay}>
           <h1>For Cram Teacher</h1>
           <h2>〜全ての塾の先生へ〜</h2>
-          <Link href="/teampage">
+          <Link href="signup">
             <button className={styles.button}>新規登録はこちら</button>
           </Link>
-          <Link href="/main">
+          <Link href="login">
             <button className={styles.button}>ログインはこちら</button>
           </Link>
         </div>
