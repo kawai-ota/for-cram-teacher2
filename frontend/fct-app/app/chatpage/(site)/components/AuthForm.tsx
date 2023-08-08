@@ -1,4 +1,6 @@
 "use client";
+
+import axios from "axios";
 import React, { useCallback, useState } from "react";
 import {
   FieldValues,
@@ -11,7 +13,6 @@ import Input from "../../components/inputs/Input";
 import Button from "../../components/Button";
 import AuthSocialButton from "./AuthSocialButton";
 import { BsGoogle } from "react-icons/bs";
-import Link from "next/link";
 
 type Variant = "LOGIN" | "REGISTER";
 
@@ -41,6 +42,7 @@ const AuthForm = () => {
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true);
     if (variant === "REGISTER") {
+      axios.post("../../api/register", data);
     }
 
     if (variant === "LOGIN") {
@@ -72,11 +74,13 @@ const AuthForm = () => {
             disabled={isLoading}
           />
           <Input
-            id="password"
-            label="Password"
+            disabled={isLoading}
             register={register}
             errors={errors}
-            disabled={isLoading}
+            required
+            id="password"
+            label="Password"
+            type="password"
           />
           <div>
             <Button disabled={isLoading} fullWidth type="submit">

@@ -6,13 +6,11 @@ const Page = () => {
   return (
     <div className="flex h-screen">
       <div className="w-7/12 flex justify-center items-center bg-gray-100">
-        {/* 左側のコンテンツ */}
         <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
           Hello!
         </h2>
       </div>
       <div className="w-5/12 flex flex-col justify-center items-center ">
-        {/* 右側のコンテンツ */}
         <Image
           alt="Logo"
           height="48"
