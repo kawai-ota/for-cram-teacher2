@@ -11,6 +11,7 @@ import Input from "../../components/inputs/Input";
 import Button from "../../components/Button";
 import AuthSocialButton from "./AuthSocialButton";
 import { BsGoogle } from "react-icons/bs";
+import Link from "next/link";
 
 type Variant = "LOGIN" | "REGISTER";
 
@@ -98,7 +99,7 @@ const AuthForm = () => {
           <div>
             {variant === "LOGIN"
               ? "新規登録をしますか？"
-              : "すでにアカウントが存在しています"}
+              : "すでにアカウントが存在しています。"}
           </div>
           <div onClick={toggleVariant} className="underline cursor-pointer">
             {variant === "LOGIN" ? "アカウントを作成する" : "ログインする"}

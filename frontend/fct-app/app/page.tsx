@@ -1,5 +1,6 @@
 import styles from "../styles/home.module.css";
 import Link from "next/link";
+import { BsFillArrowRightSquareFill } from "react-icons/bs";
 
 export default function Home() {
   return (
@@ -11,11 +12,13 @@ export default function Home() {
         <div className={styles.text_overlay}>
           <h1>For Cram Teacher</h1>
           <h2>〜全ての塾の先生へ〜</h2>
-          <Link href="signup">
-            <button className={styles.button}>新規登録はこちら</button>
-          </Link>
-          <Link href="login">
-            <button className={styles.button}>ログインはこちら</button>
+          <Link href="auth">
+            <button className={styles.button}>
+              <span className="mr-4">
+                <BsFillArrowRightSquareFill />
+              </span>
+              ログイン/新規登録
+            </button>
           </Link>
         </div>
       </div>
