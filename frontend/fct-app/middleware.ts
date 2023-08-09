@@ -7,5 +7,10 @@ export default withAuth({
 });
 
 export const config = {
-  matcher: ["/chatpage/users/:path*"],
+  matcher: [
+    "/main/:path*",
+    "/chatpage/users/:path*",
+    "/paidpage",
+    "/teampage/:path*",
+  ],
 };

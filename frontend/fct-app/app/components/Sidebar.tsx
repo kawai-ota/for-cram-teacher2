@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SiShopware } from "react-icons/si";
 import { MdOutlineCancel } from "react-icons/md";
 import { links } from "./Data";
+import { signOut } from "next-auth/react";
 
 const Sidebar = () => {
   const activeMenu = true;

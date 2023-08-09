@@ -67,7 +67,7 @@ const AuthForm = () => {
       signIn("credentials", { ...data, redirect: false })
         .then((callback) => {
           if (callback?.error) {
-            toast.error("入力情報が欠けています");
+            toast.error("入力情報に誤りがあります");
           }
           if (callback?.ok && !callback?.error) {
             toast.success("ログインに成功しました");
