@@ -41,7 +41,7 @@ const main = () => {
           <Link href={"/main"}>ホーム</Link>
           <Link href={"/teampage"}>チームページ</Link>
           <Link href={"/memopage"}>メモ</Link>
-          <Link href={"/chatpage"}>チャット</Link>
+          <Link href={"/chatpage/users"}>チャット</Link>
           <Link href={"/paidpage"}>有給申請</Link>
         </div>
       </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import axios from "axios";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import {
   FieldValues,
   useForm,
@@ -14,13 +14,23 @@ import Button from "../../components/Button";
 import AuthSocialButton from "./AuthSocialButton";
 import { BsGoogle } from "react-icons/bs";
 import { toast } from "react-hot-toast";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 type Variant = "LOGIN" | "REGISTER";
 
 const AuthForm = () => {
+  const session = useSession();
+  const router = useRouter();
   const [variant, setVariant] = useState<Variant>("LOGIN");
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    if (session?.status === "authenticated") {
+      // router.push("/main");
+    }
+  }, [session?.status, router]);
+
   const toggleVariant = useCallback(() => {
     if (variant === "LOGIN") {
       setVariant("REGISTER");
@@ -46,8 +56,9 @@ const AuthForm = () => {
     if (variant === "REGISTER") {
       axios
         .post("../../api/register", data)
+        .then(() => signIn("credentials", data))
         .catch(() =>
-          toast.error("同じアカウントが存在、または、入力エラーがあります")
+          toast.error("入力情報に誤りがあるかすでに登録されています。")
         )
         .finally(() => setIsLoading(false));
     }
@@ -60,6 +71,7 @@ const AuthForm = () => {
           }
           if (callback?.ok && !callback?.error) {
             toast.success("ログインに成功しました");
+            router.push("/main");
           }
         })
         .finally(() => setIsLoading(false));
@@ -89,7 +101,7 @@ const AuthForm = () => {
           {variant === "REGISTER" && (
             <Input
               id="name"
-              label="Name"
+              label="講師名"
               register={register}
               errors={errors}
               disabled={isLoading}
@@ -97,7 +109,7 @@ const AuthForm = () => {
           )}
           <Input
             id="email"
-            label="Email address"
+            label="メールアドレス"
             register={register}
             errors={errors}
             disabled={isLoading}
@@ -108,7 +120,7 @@ const AuthForm = () => {
             errors={errors}
             required
             id="password"
-            label="Password"
+            label="講師ID"
             type="password"
           />
           <div>

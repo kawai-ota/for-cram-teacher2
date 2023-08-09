@@ -52,7 +52,7 @@ export const links = [
       {
         name: "チャット",
         icon: <BsFillChatLeftTextFill />,
-        link: "chatpage",
+        link: "chatpage/users",
       },
     ],
   },
