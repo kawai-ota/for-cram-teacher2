@@ -2,6 +2,11 @@
 import React, { useState } from "react";
 import useRoutes from "../../hooks/useRoutes";
 import DesktopData from "./DesktopData";
+import { User } from "@prisma/client";
+
+interface DesktopSidebarProps {
+  currentUser: User;
+}
 
 const DesktopSidebar = () => {
   const routes = useRoutes();
