@@ -13,6 +13,8 @@ import Input from "../../components/inputs/Input";
 import Button from "../../components/Button";
 import AuthSocialButton from "./AuthSocialButton";
 import { BsGoogle } from "react-icons/bs";
+import { toast } from "react-hot-toast";
+import { signIn } from "next-auth/react";
 
 type Variant = "LOGIN" | "REGISTER";
 
@@ -42,15 +44,42 @@ const AuthForm = () => {
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true);
     if (variant === "REGISTER") {
-      axios.post("../../api/register", data);
+      axios
+        .post("../../api/register", data)
+        .catch(() =>
+          toast.error("同じアカウントが存在、または、入力エラーがあります")
+        )
+        .finally(() => setIsLoading(false));
     }
 
     if (variant === "LOGIN") {
+      signIn("credentials", { ...data, redirect: false })
+        .then((callback) => {
+          if (callback?.error) {
+            toast.error("入力情報が欠けています");
+          }
+          if (callback?.ok && !callback?.error) {
+            toast.success("ログインに成功しました");
+          }
+        })
+        .finally(() => setIsLoading(false));
     }
   };
 
   const socialAction = (action: string) => {
     setIsLoading(true);
+
+    signIn(action, { redirect: false })
+      .then((callback) => {
+        if (callback?.error) {
+          toast.error("Invalid Credentials");
+        }
+
+        if (callback?.ok && !callback?.error) {
+          toast.success("Logged in!");
+        }
+      })
+      .finally(() => setIsLoading(false));
   };
 
   return (

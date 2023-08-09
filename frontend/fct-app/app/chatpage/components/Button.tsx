@@ -15,7 +15,8 @@ interface ButtonProps {
 import React from "react";
 
 const Button: React.FC<ButtonProps> = ({
-  type,
+  type = "button",
+  onClick,
   fullWidth,
   children,
   secondary,
@@ -24,7 +25,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      // onClick={onClick}
+      onClick={onClick}
       type={type}
       disabled={disabled}
       className={clsx(
