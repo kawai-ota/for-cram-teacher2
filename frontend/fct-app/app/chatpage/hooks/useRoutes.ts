@@ -13,9 +13,9 @@ const useRoutes = () => {
     () => [
       {
         label: "チャット",
-        href: "/chatpage/conversation",
+        href: "/chatpage/conversations",
         icon: HiChat,
-        active: pathname === "/chatpage/conversation" || !!conversationId,
+        active: pathname === "/chatpage/conversations" || !!conversationId,
       },
       {
         label: "ユーザー",
