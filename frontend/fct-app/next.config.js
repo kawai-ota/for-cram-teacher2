@@ -5,7 +5,7 @@ const nextConfig = {
     swcPlugins: [["next-superjson-plugin", {}]],
   },
   images: {
-    domains: ["res.cloudinary.com"],
+    domains: ["res.cloudinary.com", "lh3.googleusercontent.com"],
   },
 };
 
