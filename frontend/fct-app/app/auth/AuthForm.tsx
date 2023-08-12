@@ -9,9 +9,9 @@ import {
   RegisterOptions,
   UseFormRegisterReturn,
 } from "react-hook-form";
-import Input from "../../components/inputs/Input";
-import Button from "../../components/Button";
-import AuthSocialButton from "./AuthSocialButton";
+import Input from "../chatpage/components/inputs/Input";
+import Button from "../chatpage/components/Button";
+import AuthSocialButton from "../chatpage/(site)/components/AuthSocialButton";
 import { BsGoogle } from "react-icons/bs";
 import { toast } from "react-hot-toast";
 import { signIn, useSession } from "next-auth/react";

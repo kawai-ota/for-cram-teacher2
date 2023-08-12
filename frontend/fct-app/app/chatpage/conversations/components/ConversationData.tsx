@@ -24,7 +24,7 @@ const ConversationData: React.FC<ConversationDataProps> = ({
   const router = useRouter();
 
   const handleClick = useCallback(() => {
-    router.push(`/conversations/${data.id}`);
+    router.push(`/chatpage/conversations/${data.id}`);
   }, [data.id, router]);
 
   const lastMessage = useMemo(() => {
