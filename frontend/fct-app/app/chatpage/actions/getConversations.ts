@@ -32,3 +32,5 @@ const getConversations = async () => {
     return [];
   }
 };
+
+export default getConversations;
