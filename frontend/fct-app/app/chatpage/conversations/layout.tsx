@@ -11,8 +11,10 @@ export default async function ConversationsLayout({
   const conversations = await getConversations();
   return (
     <Sidebar>
-      <ConversationList initialItems={conversations} />
-      <div className="h-full">{children}</div>
+      <div className="h-full">
+        {children}
+        <ConversationList initialItems={conversations} />
+      </div>
     </Sidebar>
   );
 }
