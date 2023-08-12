@@ -53,7 +53,7 @@ const ConversationData: React.FC<ConversationDataProps> = ({
 
   const lastMessageText = useMemo(() => {
     if (lastMessage?.image) {
-      return "Sent an image";
+      return "画像が送信されました";
     }
 
     if (lastMessage?.body) {
