@@ -13,6 +13,7 @@ export async function POST(request: Request) {
     }
 
     if (isGroup && (!members || members.length < 2 || !name)) {
+      console.log("Invalid data condition met");
       return new NextResponse("Invalid data", { status: 400 });
     }
 
@@ -40,7 +41,7 @@ export async function POST(request: Request) {
       return NextResponse.json(newConversation);
     }
 
-    const existingConversation = await prisma.conversation.findMany({
+    const existingConversations = await prisma.conversation.findMany({
       where: {
         OR: [
           {
@@ -57,7 +58,7 @@ export async function POST(request: Request) {
       },
     });
 
-    const singleConversation = existingConversation[0];
+    const singleConversation = existingConversations[0];
     if (singleConversation) {
       return NextResponse.json(singleConversation);
     }
