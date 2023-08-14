@@ -66,7 +66,7 @@ const GroupChatModal: React.FC<GroupChatModalProps> = ({
               <Input
                 register={register}
                 label="Name"
-                id="Name"
+                id="name"
                 disabled={isLoading}
                 required
                 errors={errors}

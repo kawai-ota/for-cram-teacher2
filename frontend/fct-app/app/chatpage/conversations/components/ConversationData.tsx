@@ -9,6 +9,7 @@ import { FullConversationType } from "../../types";
 import useOtherUser from "../../hooks/useOtherUser";
 import { useRouter } from "next/navigation";
 import Avatar from "../../components/Avatar";
+import AvatarGroup from "../../components/AvatarGroup";
 
 interface ConversationDataProps {
   data: FullConversationType;
@@ -70,7 +71,11 @@ const ConversationData: React.FC<ConversationDataProps> = ({
         selected ? "bg-neutral-100" : "bg-white"
       )}
     >
-      <Avatar user={otherUser} />
+      {data.isGroup ? (
+        <AvatarGroup users={data.users} />
+      ) : (
+        <Avatar user={otherUser} />
+      )}
       <div className="min-w-0 flex-1">
         <div className="focus:outline-none">
           <div className="flex justify-between items-center mb-1">
