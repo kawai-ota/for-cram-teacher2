@@ -1,0 +1,90 @@
+.video_container {
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+.video_container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text_overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* テキストを中央揃えにする */
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  max-width: 80%;
+}
+
+.text_overlay h1 {
+  font-size: xx-large;
+  margin-bottom: 10px; /* h1の下に余白を設定 */
+}
+
+.text_overlay h2 {
+  font-size: large;
+  margin-top: 10px; /* h2の上に余白を設定 */
+}
+
+/* ボタンのスタイルをカスタマイズ */
+.text_overlay button {
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+}
+
+.text_overlay button:hover {
+  background-color: #0056b3;
+}
+
+.text_overlay button:active {
+  background-color: #003079;
+}
+
+.text_overlay button:focus {
+  outline: none;
+}
+
+.text_overlay button::before {
+  margin-right: 8px;
+}
+
+.text_overlay button span {
+  vertical-align: middle;
+}
+
+@media (max-width: 1700px) {
+  .video_container {
+    padding-top: 100vh;
+  }
+}
+
+@media (max-width: 1024px) {
+  .button {
+    margin-top: 20px;
+  }
+}
