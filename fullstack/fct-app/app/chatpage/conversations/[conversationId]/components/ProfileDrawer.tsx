@@ -9,6 +9,7 @@ import Avatar from "@/app/chatpage/components/Avatar";
 import Modal from "@/app/chatpage/components/Modal";
 import ConfirmModal from "./ConfirmModal";
 import AvatarGroup from "@/app/chatpage/components/AvatarGroup";
+import useActiveList from "@/app/chatpage/hooks/useActiveList";
 
 interface ProfileDrawerProps {
   isOpen: boolean;
@@ -25,6 +26,8 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
 }) => {
   const otherUser = useOtherUser(data);
   const [confirmOpen, setConfirmOpen] = useState(false);
+  const { members } = useActiveList();
+  const isActive = members.indexOf(otherUser?.email!) !== -1;
 
   const joinedDate = useMemo(() => {
     return format(new Date(otherUser.createdAt), "PP");
@@ -39,8 +42,8 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
       return `${data.users.length} members`;
     }
 
-    return "オンライン";
-  }, [data]);
+    return isActive ? "オンライン" : "オフライン";
+  }, [data, isActive]);
 
   return (
     <>
