@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ conversation }) => {
       return `${conversation.users.length}人のメンバー`;
     }
     return isActive ? "オンライン" : "オフライン";
-  }, [conversation]);
+  }, [conversation, isActive]);
 
   return (
     <>
