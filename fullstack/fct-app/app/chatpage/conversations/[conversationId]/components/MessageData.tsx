@@ -61,7 +61,7 @@ const MessageData: React.FC<MessageDataProps> = ({ data, isLast }) => {
           )}
         </div>
         {isLast && isOwn && seenList.length > 0 && (
-          <div className="text-xs font-light text-gray-500">{`${seenList}が既読 `}</div>
+          <div className="text-xs font-light text-gray-500">既読</div>
         )}
       </div>
     </div>
