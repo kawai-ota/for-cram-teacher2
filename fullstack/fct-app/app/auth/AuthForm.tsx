@@ -54,7 +54,7 @@ const AuthForm = () => {
     setIsLoading(true);
     if (variant === "REGISTER") {
       axios
-        .post("../../api/register", data)
+        .post("/api/register", data)
         .then(() => signIn("credentials", data))
         .catch(() =>
           toast.error("入力情報に誤りがあるかすでに登録されています。")
@@ -66,7 +66,7 @@ const AuthForm = () => {
       signIn("credentials", { ...data, redirect: false })
         .then((callback) => {
           if (callback?.error) {
-            toast.error("入力情報");
+            toast.error("入力情報に誤りがあります");
           }
           if (callback?.ok && !callback?.error) {
             toast.success("ログインに成功しました");
@@ -111,8 +111,12 @@ const AuthForm = () => {
             label="メールアドレス"
             register={register}
             errors={errors}
+            required
             disabled={isLoading}
           />
+          <span style={{ color: "red" }}>
+            {errors.email && "メールアドレスは必須です"}
+          </span>
           <Input
             disabled={isLoading}
             register={register}
@@ -122,6 +126,9 @@ const AuthForm = () => {
             label="講師ID"
             type="password"
           />
+          <span style={{ color: "red" }}>
+            {errors.password && "パスワードは必須です"}
+          </span>
           <div>
             <Button disabled={isLoading} fullWidth type="submit">
               {variant === "LOGIN" ? "ログイン" : "新規登録"}

@@ -1,6 +1,7 @@
 "use client";
 
 import clsx from "clsx";
+import React from "react";
 
 interface ButtonProps {
   type?: "button" | "submit" | "reset" | undefined;
@@ -11,8 +12,6 @@ interface ButtonProps {
   danger?: boolean;
   disabled?: boolean;
 }
-
-import React from "react";
 
 const Button: React.FC<ButtonProps> = ({
   type = "button",
