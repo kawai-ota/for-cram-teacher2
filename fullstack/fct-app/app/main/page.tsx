@@ -4,7 +4,6 @@ import "./main.css";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
-import Footer from "../components/Footer";
 import { signOut } from "next-auth/react";
 
 const main = () => {
@@ -31,21 +30,10 @@ const main = () => {
         </div>
       )}
       <div
-        className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${
+        className={`dark:bg-main-bg bg-gray-100 min-h-screen w-full ${
           activeMenu ? "md:ml-72" : "flex-2"
         }`}
-      >
-        <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
-          <Navbar />
-        </div>
-        <div className="">
-          <Link href={"/main"}>ホーム</Link>
-          <Link href={"/teampage"}>チームページ</Link>
-          <Link href={"/memopage"}>メモ</Link>
-          <Link href={"/chatpage/users"}>チャット</Link>
-          <Link href={"/paidpage"}>有給申請</Link>
-        </div>
-      </div>
+      ></div>
       <div className=""></div>
     </div>
   );
