@@ -1,17 +1,9 @@
 "use client";
 import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
-import {
-  FieldValues,
-  useForm,
-  SubmitHandler,
-  RegisterOptions,
-  UseFormRegisterReturn,
-} from "react-hook-form";
+import { FieldValues, useForm, SubmitHandler } from "react-hook-form";
 import Input from "../chatpage/components/inputs/Input";
 import Button from "../chatpage/components/Button";
-import AuthSocialButton from "../chatpage/(site)/components/AuthSocialButton";
-import { BsGoogle } from "react-icons/bs";
 import { toast } from "react-hot-toast";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -23,12 +15,6 @@ const AuthForm = () => {
   const router = useRouter();
   const [variant, setVariant] = useState<Variant>("LOGIN");
   const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    if (session?.status === "authenticated") {
-      // router.push("/main");
-    }
-  }, [session?.status, router]);
 
   const toggleVariant = useCallback(() => {
     if (variant === "LOGIN") {
