@@ -5,6 +5,7 @@ import { GrMail } from "react-icons/gr";
 import { MdTask } from "react-icons/md";
 import { BsFillCalendarDateFill } from "react-icons/bs";
 import { FaStickyNote } from "react-icons/fa";
+import { BiWalk } from "react-icons/bi";
 
 export const links = [
   {
@@ -64,6 +65,17 @@ export const links = [
         name: "有給申請",
         icon: <GrMail />,
         link: "paidpage",
+      },
+    ],
+  },
+  {
+    icon: <BiWalk />,
+    title: "JOB",
+    links: [
+      {
+        name: "出向",
+        icon: <BiWalk />,
+        link: "job",
       },
     ],
   },

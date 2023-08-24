@@ -1,4 +1,6 @@
+import Header from "@/app/chatpage/conversations/[conversationId]/components/Header";
 import Navbar from "@/app/components/Navbar";
+import Sidebar from "@/app/components/Sidebar";
 import React from "react";
 
 const Page = () => {
