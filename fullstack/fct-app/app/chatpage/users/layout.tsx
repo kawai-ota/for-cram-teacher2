@@ -8,5 +8,5 @@ export default async function UsersLayout({
   children: React.ReactNode;
 }) {
   const users = await getUsers();
-  return <div className="h-full">{children}</div>;
+  return <div>{children}</div>;
 }

@@ -26,7 +26,8 @@ const UserBox: React.FC<UserBoxProps> = ({ data }) => {
       {isLoading && <LoadingModal />}
       <div
         onClick={handleClick}
-        className="w-full relative flex items-center space-x-3 bg-white p-8 rounded-lg cursor-pointer border border-transparent transition duration-300 ease-in-out hover:border-black hover:shadow-sm"
+        className="w-full relative flex justify-between items-center space-x-3 bg-white mr-10 p-8 rounded-lg cursor-pointer border border-transparent transition duration-300 ease-in-out hover:border-black hover:shadow-sm"
+        style={{ width: "345px", height: "480px" }}
       >
         <Avatar user={data} />
         <div className="min-w-0 flex-1">
