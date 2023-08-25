@@ -56,7 +56,7 @@ const AuthForm = () => {
           }
           if (callback?.ok && !callback?.error) {
             toast.success("ログインに成功しました");
-            router.push("/main");
+            router.push("/chatpage/users");
           }
         })
         .finally(() => setIsLoading(false));
