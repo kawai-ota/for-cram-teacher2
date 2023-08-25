@@ -10,8 +10,8 @@ export default function Home() {
           Your browser does not support the video tag.
         </video>
         <div className={styles.text_overlay}>
-          <h1>For Cram Teacher</h1>
-          <h2>〜全ての塾の先生へ〜</h2>
+          <p className="font-bold text-5xl">For Cram Teacher</p>
+          <h2>先生方に活躍を、輝ける場所を</h2>
           <Link href="auth">
             <button className={styles.button}>
               <span className="mr-4">

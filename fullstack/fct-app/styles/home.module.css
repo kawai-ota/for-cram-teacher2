@@ -37,14 +37,16 @@
 
 /* ボタンのスタイルをカスタマイズ */
 .text_overlay button {
-  margin-top: 20px;
+  width: 390px;
+  margin-top: 25px;
   margin-left: 20px;
+  margin-right: 20px;
   padding: 10px 20px;
   font-size: 18px;
   color: white;
   background-color: #007bff;
   border: none;
-  border-radius: 30px;
+  border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease-in-out;
@@ -77,7 +79,7 @@
   vertical-align: middle;
 }
 
-@media (max-width: 1700px) {
+@media (max-width: 2000px) {
   .video_container {
     padding-top: 100vh;
   }
