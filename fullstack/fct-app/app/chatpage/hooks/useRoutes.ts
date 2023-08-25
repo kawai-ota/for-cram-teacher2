@@ -23,11 +23,6 @@ const useRoutes = () => {
         icon: HiUsers,
         active: pathname === "/chatpage/users",
       },
-      {
-        label: "Logout",
-        href: "/main",
-        icon: HiArrowLeftOnRectangle,
-      },
     ],
     [pathname, conversationId]
   );
