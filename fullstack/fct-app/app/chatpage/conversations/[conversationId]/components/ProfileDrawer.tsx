@@ -38,7 +38,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
 
   const statusText = useMemo(() => {
     if (data.isGroup) {
-      return `${data.users.length} 人のメンバー`;
+      return `${data.users.length - 1} 人のメンバー`;
     }
 
     return isActive ? "オンライン" : "オフライン";

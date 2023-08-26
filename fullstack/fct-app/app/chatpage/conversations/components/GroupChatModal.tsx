@@ -65,7 +65,7 @@ const GroupChatModal: React.FC<GroupChatModalProps> = ({
             <div className="mt-10 flex flex-col gap-y-8">
               <Input
                 register={register}
-                label="Name"
+                label="グループ名"
                 id="name"
                 disabled={isLoading}
                 required
@@ -73,7 +73,7 @@ const GroupChatModal: React.FC<GroupChatModalProps> = ({
               />
               <Select
                 disabled={isLoading}
-                label="Members"
+                label="メンバー"
                 options={users.map((user) => ({
                   value: user.id,
                   label: user.name,
