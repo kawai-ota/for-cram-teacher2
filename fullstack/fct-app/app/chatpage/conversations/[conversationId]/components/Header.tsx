@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ conversation }) => {
 
   const statusText = useMemo(() => {
     if (conversation.isGroup) {
-      return `${conversation.users.length - 1}人のメンバー`;
+      return `${conversation.users.length}人のメンバー`;
     }
     return isActive ? "オンライン" : "オフライン";
   }, [conversation, isActive]);
