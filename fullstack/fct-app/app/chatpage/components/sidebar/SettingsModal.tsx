@@ -107,7 +107,7 @@ const SettingsModal: React.FC<SettingModalProps> = ({
             <Button disabled={isLoading} secondary onClick={onClose}>
               閉じる
             </Button>
-            <Button disabled={isLoading} onClick={onClose}>
+            <Button disabled={isLoading} type = 'submit'>
               保存
             </Button>
           </div>
