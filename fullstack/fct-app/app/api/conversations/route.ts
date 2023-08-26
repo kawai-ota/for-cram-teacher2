@@ -1,7 +1,6 @@
 import getCurrentUser from "@/app/chatpage/actions/getCurrentUser";
 import { NextResponse } from "next/server";
 import prisma from "@/app/chatpage/libs/prismadb";
-import { AuthOptions } from "next-auth";
 import { pusherServer } from "@/app/chatpage/libs/pusher";
 
 export async function POST(request: Request) {
@@ -14,7 +13,7 @@ export async function POST(request: Request) {
     }
 
     if (isGroup && (!members || members.length < 2 || !name)) {
-      console.log("Invalid data condition met");
+      console.log("条件を満たしていないため、作成できません");
       return new NextResponse("Invalid data", { status: 400 });
     }
 

@@ -6,7 +6,6 @@ import { format } from "date-fns";
 import { Dialog, Transition } from "@headlessui/react";
 import { IoClose, IoTrash } from "react-icons/io5";
 import Avatar from "@/app/chatpage/components/Avatar";
-import Modal from "@/app/chatpage/components/Modal";
 import ConfirmModal from "./ConfirmModal";
 import AvatarGroup from "@/app/chatpage/components/AvatarGroup";
 import useActiveList from "@/app/chatpage/hooks/useActiveList";
@@ -39,7 +38,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
 
   const statusText = useMemo(() => {
     if (data.isGroup) {
-      return `${data.users.length} members`;
+      return `${data.users.length} 人のメンバー`;
     }
 
     return isActive ? "オンライン" : "オフライン";
@@ -85,7 +84,6 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                               type="button"
                               className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2"
                             >
-                              <span className="sr-only">閉じる</span>
                               <IoClose size={24} />
                             </button>
                           </div>

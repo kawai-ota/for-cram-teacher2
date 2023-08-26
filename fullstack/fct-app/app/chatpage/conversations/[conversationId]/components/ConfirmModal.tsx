@@ -54,7 +54,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({ isOpen, onClose }) => {
         <Button disabled={isLoading} danger onClick={onDelete}>
           削除
         </Button>
-        <Button disabled={isLoading} secondary onClick={onDelete}>
+        <Button disabled={isLoading} secondary onClick={onClose}>
           閉じる
         </Button>
       </div>
