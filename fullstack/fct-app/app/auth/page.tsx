@@ -1,13 +1,10 @@
-import React from "react";
+import Image from "next/image";
 import AuthForm from "./AuthForm";
 
-const Page = () => {
+const Auth = () => {
   return (
-    <div className="flex h-screen">
-      <div className="w-7/12 flex justify-center items-center bg-gray-100">
-        <AuthForm />
-      </div>
-      <div className="w-5/12 flex flex-col justify-center items-center ">
+    <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8 bg-gray-100">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h1 className="mt-7 text-center text-5xl font-bold tracking-tight text-gray-900">
           For Cram Teacher
         </h1>
@@ -15,8 +12,9 @@ const Page = () => {
           ~先生方に活躍を、輝ける場所を~
         </h2>
       </div>
+      <AuthForm />
     </div>
   );
 };
 
-export default Page;
+export default Auth;
