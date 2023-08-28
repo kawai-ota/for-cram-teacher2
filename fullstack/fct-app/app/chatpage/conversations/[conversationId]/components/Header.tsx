@@ -1,13 +1,13 @@
 "use client";
 import React, { useMemo, useState } from "react";
 import { Conversation, User } from "@prisma/client";
-import useOtherUser from "@/app/hooks/useOtherUser";
+import useOtherUser from "@/app/chatpage/hooks/useOtherUser";
 import Link from "next/link";
 import { HiChevronLeft, HiEllipsisHorizontal } from "react-icons/hi2";
-import Avatar from "@/app/components/Avatar";
+import Avatar from "@/app/chatpage/components/Avatar";
 import ProfileDrawer from "./ProfileDrawer";
-import AvatarGroup from "@/app/components/AvatarGroup";
-import useActiveList from "@/app/hooks/useActiveList";
+import AvatarGroup from "@/app/chatpage/components/AvatarGroup";
+import useActiveList from "@/app/chatpage/hooks/useActiveList";
 
 interface HeaderProps {
   conversation: Conversation & {
@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ conversation }) => {
         <div className="flex gap-3 items-center">
           <Link
             className="lg:hidden block text-sky-500 hover:text-sky-600 transition cursor-pointer"
-            href="/conversations"
+            href="/chatpage/conversations"
           >
             <HiChevronLeft size={32} />
           </Link>
