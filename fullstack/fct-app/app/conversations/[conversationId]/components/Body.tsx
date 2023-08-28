@@ -1,10 +1,10 @@
 "use client";
-import useConversation from "@/app/chatpage/hooks/useConversation";
-import { FullMessageType } from "@/app/chatpage/types";
+import useConversation from "@/app/hooks/useConversation";
+import { FullMessageType } from "@/app/types";
 import React, { useEffect, useRef, useState } from "react";
 import MessageData from "./MessageData";
 import axios from "axios";
-import { pusherClient } from "@/app/chatpage/libs/pusher";
+import { pusherClient } from "@/app/libs/pusher";
 import { find } from "lodash";
 
 interface BodyProps {
