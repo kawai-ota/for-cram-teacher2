@@ -5,11 +5,11 @@ import React, { useCallback, useState } from "react";
 import Avatar from "../../components/Avatar";
 import LoadingModal from "../../components/LoadingModal";
 
-interface UserBoxProps {
+interface UserDataProps {
   data: User;
 }
 
-const UserBox: React.FC<UserBoxProps> = ({ data }) => {
+const UserData: React.FC<UserDataProps> = ({ data }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const handleClick = useCallback(() => {
@@ -42,4 +42,4 @@ const UserBox: React.FC<UserBoxProps> = ({ data }) => {
   );
 };
 
-export default UserBox;
+export default UserData;
