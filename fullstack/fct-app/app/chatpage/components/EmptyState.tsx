@@ -10,9 +10,9 @@ const EmptyState = () => {
         <h1 className="mt-2 text-5xl font-bold text-gray-900">
           For Cram Teacher
         </h1>
-        <h3 className="mt-3 text-2xl text-gray-800">
-          ~先生方に活躍を、輝ける場所を~
-        </h3>
+        <h4 className="mt-3 text-xl text-gray-800">
+          〜先生方に活躍を、輝ける場所で仕事を〜
+        </h4>
       </div>
     </div>
   );

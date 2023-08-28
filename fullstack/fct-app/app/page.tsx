@@ -11,7 +11,7 @@ export default function Home() {
         </video>
         <div className={styles.text_overlay}>
           <p className="font-bold text-5xl">For Cram Teacher</p>
-          <h2>先生方に活躍を、輝ける場所で仕事を</h2>
+          <h2>〜先生方に活躍を、輝ける場所で仕事を〜</h2>
           <Link href="auth">
             <button className={styles.button}>
               <span className="mr-4">
