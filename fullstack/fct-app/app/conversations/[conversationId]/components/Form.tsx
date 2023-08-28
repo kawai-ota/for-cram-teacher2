@@ -1,5 +1,5 @@
 "use client";
-import useConversation from "@/app/chatpage/hooks/useConversation";
+import useConversation from "@/app/hooks/useConversation";
 import axios from "axios";
 import React from "react";
 import { Field, FieldValues, SubmitHandler, useForm } from "react-hook-form";

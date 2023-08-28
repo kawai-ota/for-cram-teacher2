@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 
-import prisma from "../../chatpage/libs/prismadb";
+import prisma from "../../libs/prismadb";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {

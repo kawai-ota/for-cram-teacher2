@@ -2,8 +2,8 @@
 import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
 import { FieldValues, useForm, SubmitHandler } from "react-hook-form";
-import Input from "../chatpage/components/inputs/Input";
-import Button from "../chatpage/components/Button";
+import Input from "../components/inputs/Input";
+import Button from "../components/Button";
 import { toast } from "react-hot-toast";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -56,7 +56,7 @@ const AuthForm = () => {
           }
           if (callback?.ok && !callback?.error) {
             toast.success("ログインに成功しました");
-            router.push("/chatpage/users");
+            router.push("/users");
           }
         })
         .finally(() => setIsLoading(false));

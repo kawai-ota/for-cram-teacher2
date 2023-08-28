@@ -1,5 +1,5 @@
 "use client";
-import Modal from "@/app/chatpage/components/Modal";
+import Modal from "@/app/components/Modal";
 import React from "react";
 import Image from "next/image";
 

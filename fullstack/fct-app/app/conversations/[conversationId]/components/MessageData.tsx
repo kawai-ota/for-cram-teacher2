@@ -1,8 +1,8 @@
-import { FullMessageType } from "@/app/chatpage/types";
+import { FullMessageType } from "@/app/types";
 import { useSession } from "next-auth/react";
 import React, { useState } from "react";
 import clsx from "clsx";
-import Avatar from "@/app/chatpage/components/Avatar";
+import Avatar from "@/app/components/Avatar";
 import { format } from "date-fns";
 import Image from "next/image";
 import ImageModal from "./ImageModal";

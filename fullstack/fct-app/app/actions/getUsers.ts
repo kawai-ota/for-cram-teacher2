@@ -1,4 +1,4 @@
-import prisma from "@/app/chatpage/libs/prismadb";
+import prisma from "@/app/libs/prismadb";
 import getSession from "./getSession";
 
 const getUsers = async () => {

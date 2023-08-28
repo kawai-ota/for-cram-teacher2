@@ -67,7 +67,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
       });
 
       if (conversationId === conversation.id) {
-        router.push("/chatpage/conversations");
+        router.push("/conversations");
       }
     };
 
