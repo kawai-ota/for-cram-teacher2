@@ -15,16 +15,10 @@ const DesktopData: React.FC<DesktopItemProps> = ({
   label,
   icon: Icon,
   href,
-  onClick,
   active,
 }) => {
-  const handleClick = () => {
-    if (onClick) {
-      return onClick();
-    }
-  };
   return (
-    <li onClick={handleClick}>
+    <li>
       <Link
         href={href}
         className={clsx(

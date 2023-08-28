@@ -14,17 +14,10 @@ const MobileData: React.FC<MobileItemsProps> = ({
   href,
   icon: Icon,
   active,
-  onClick,
 }) => {
-  const handleClick = () => {
-    if (onClick) {
-      return onClick();
-    }
-  };
   return (
     <Link
       href={href}
-      onClick={onClick}
       className={clsx(
         `
     group flex gap-x-3 text-sm leading-6 font-semibold w-full justify-center p-4 text-gray-500 hover:text-black hover:bg-gray-100
