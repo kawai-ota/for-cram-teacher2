@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import ToasterContext from "./chatpage/context/ToasterContext";
 import AuthContext from "./chatpage/context/AuthContext";
+import ToasterContext from "./chatpage/context/ToasterContext";
 import ActiveStatus from "./chatpage/components/ActiveStatus";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,6 +21,7 @@ export default function RootLayout({
     <html lang="ja">
       <body className={inter.className}>
         <AuthContext>
+          <ToasterContext />
           <ActiveStatus />
           {children}
         </AuthContext>
