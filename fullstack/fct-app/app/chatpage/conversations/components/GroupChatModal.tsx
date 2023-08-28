@@ -48,7 +48,7 @@ const GroupChatModal: React.FC<GroupChatModalProps> = ({
         router.refresh();
         onClose();
       })
-      .catch(() => toast.error("問題が起きました"))
+      .catch(() => toast.error("2人以上でないと作成できません"))
       .finally(() => setIsLoading(false));
   };
   return (
