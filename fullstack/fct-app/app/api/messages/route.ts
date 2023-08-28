@@ -1,7 +1,7 @@
-import getCurrentUser from "@/app/actions/getCurrentUser";
+import getCurrentUser from "@/app/chatpage/actions/getCurrentUser";
 import { NextResponse } from "next/server";
-import prisma from "@/app/libs/prismadb";
-import { pusherServer } from "../../libs/pusher";
+import prisma from "@/app/chatpage/libs/prismadb";
+import { pusherServer } from "../../chatpage/libs/pusher";
 
 export async function POST(request: Request) {
   try {

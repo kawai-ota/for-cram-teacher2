@@ -2,10 +2,10 @@
 import { useRouter } from "next/navigation";
 import React, { useCallback, useState } from "react";
 import ConversationId from "../page";
-import useConversation from "@/app/hooks/useConversation";
+import useConversation from "@/app/chatpage/hooks/useConversation";
 import axios from "axios";
 import toast from "react-hot-toast";
-import Modal from "@/app/components/Modal";
+import Modal from "@/app/chatpage/components/Modal";
 import { FiAlertTriangle } from "react-icons/fi";
 import { Dialog } from "@headlessui/react";
 import Button from "../../../components/Button";

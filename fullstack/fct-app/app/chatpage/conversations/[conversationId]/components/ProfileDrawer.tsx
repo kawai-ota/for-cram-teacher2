@@ -1,14 +1,14 @@
 "use client";
 import React, { Fragment, useMemo, useState } from "react";
 import { Conversation, User } from "@prisma/client";
-import useOtherUser from "@/app/hooks/useOtherUser";
+import useOtherUser from "@/app/chatpage/hooks/useOtherUser";
 import { format } from "date-fns";
 import { Dialog, Transition } from "@headlessui/react";
 import { IoClose, IoTrash } from "react-icons/io5";
-import Avatar from "@/app/components/Avatar";
+import Avatar from "@/app/chatpage/components/Avatar";
 import ConfirmModal from "./ConfirmModal";
-import AvatarGroup from "@/app/components/AvatarGroup";
-import useActiveList from "@/app/hooks/useActiveList";
+import AvatarGroup from "@/app/chatpage/components/AvatarGroup";
+import useActiveList from "@/app/chatpage/hooks/useActiveList";
 
 interface ProfileDrawerProps {
   isOpen: boolean;
