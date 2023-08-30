@@ -3,7 +3,7 @@ import AuthForm from "./AuthForm";
 const Auth = () => {
   return (
     <div
-      className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8"
+      className="flex min-h-full flex-row justify-center py-12 sm:px-6 lg:px-8"
       style={{ backgroundColor: "#FBF7F1" }}
     >
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
