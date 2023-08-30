@@ -1,9 +1,11 @@
-import Image from "next/image";
 import AuthForm from "./AuthForm";
 
 const Auth = () => {
   return (
-    <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8 bg-gray-100">
+    <div
+      className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8"
+      style={{ backgroundColor: "#FBF7F1" }}
+    >
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h1 className="mt-7 text-center text-5xl font-bold tracking-tight text-gray-900">
           For Cram Teacher

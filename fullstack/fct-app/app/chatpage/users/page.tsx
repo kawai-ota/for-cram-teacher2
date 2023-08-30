@@ -9,7 +9,7 @@ export default async function Users() {
         <p className="text-5xl font-bold">For Cram Teacher</p>
         <p className="text-xl mt-5">先生方に活躍を、輝ける場所で仕事を</p>
       </div>
-      <div className="w-full bg-gray-100">
+      <div className="w-full " style={{ backgroundColor: "#FBF7F1" }}>
         <p className="text-2xl flex justify-center items-center mt-10">
           出向可能講師リスト
         </p>
