@@ -26,7 +26,7 @@ const MessageData: React.FC<MessageDataProps> = ({ data, isLast }) => {
   const body = clsx("flex flex-col gap-2", isOwn && "items-end");
   const message = clsx(
     "text-sm w-fit overflow-hidden",
-    isOwn ? "bg-sky-500 text-white" : "bg-gray-100",
+    isOwn ? "bg-[#3EBCB5] text-white" : "bg-gray-100",
     data.image ? "rounded-md p-0" : "rounded-full py-2 px-3"
   );
   return (

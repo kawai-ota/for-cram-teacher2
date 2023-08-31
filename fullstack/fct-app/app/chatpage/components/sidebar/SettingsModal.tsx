@@ -82,8 +82,8 @@ const SettingsModal: React.FC<SettingModalProps> = ({
                 </label>
                 <div className="mt-2 flex items-center gap-x-3">
                   <Image
-                    width="48"
-                    height="48"
+                    width="50"
+                    height="50"
                     className="rounded-full"
                     src={
                       image || currentUser?.image || "/images/placeholder.jpg"
@@ -107,7 +107,7 @@ const SettingsModal: React.FC<SettingModalProps> = ({
             <Button disabled={isLoading} secondary onClick={onClose}>
               閉じる
             </Button>
-            <Button disabled={isLoading} type = 'submit'>
+            <Button disabled={isLoading} type="submit">
               保存
             </Button>
           </div>
