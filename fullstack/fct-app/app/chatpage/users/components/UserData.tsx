@@ -17,7 +17,7 @@ const UserData: React.FC<UserDataProps> = ({ data }) => {
     axios
       .post("/api/conversations", { userId: data.id })
       .then((data) => {
-        router.push(`/chatpage/conversations/${data.data.id}`);
+        router.push(`/detail/edit/${data.data.id}`);
       })
       .finally(() => setIsLoading(false));
   }, [data, router]);
