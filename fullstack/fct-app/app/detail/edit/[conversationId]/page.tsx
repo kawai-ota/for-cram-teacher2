@@ -1,12 +1,12 @@
 import React from "react";
-import Link from "next/link";
+import Header from "../../components/Header";
+import Container from "../../components/Container";
 
 const page = () => {
   return (
-    <div>
-      <Link href={`/chatpage/conversations`}>
-        <button>この先生にお願いする</button>
-      </Link>
+    <div className="w-full h-screen bg-[#FBF7F1]">
+      <Header />
+      <Container />
     </div>
   );
 };
