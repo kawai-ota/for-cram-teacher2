@@ -62,8 +62,6 @@ model Conversation {
   userIds String[] @db.ObjectId
   users User[] @relation(fields: [userIds], references: [id])
 
-  postId String @db.ObjectId
-  post Post?
 }
 
 model Message {
@@ -83,11 +81,10 @@ model Message {
 }
 model Post {
   id           String   @id @default(auto()) @map("_id") @db.ObjectId
-  title        String
+  status       String
+  classname    String
+  information  String
   description  String
   image        String?
   date         DateTime @default(now())
-
-  conversationId String @db.ObjectId @unique
-  conversation Conversation @relation(fields: [conversationId], references: [id])
 }

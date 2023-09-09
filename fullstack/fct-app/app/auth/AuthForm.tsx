@@ -56,7 +56,7 @@ const AuthForm = () => {
           }
           if (callback?.ok && !callback?.error) {
             toast.success("ログインに成功しました");
-            router.push("/chatpage/users");
+            router.push("/detail");
           }
         })
         .finally(() => setIsLoading(false));
@@ -69,7 +69,7 @@ const AuthForm = () => {
           {variant === "REGISTER" && (
             <Input
               id="name"
-              label="講師名"
+              label="教室名"
               register={register}
               errors={errors}
               disabled={isLoading}
@@ -92,7 +92,7 @@ const AuthForm = () => {
             errors={errors}
             required
             id="password"
-            label="講師ID"
+            label="教室ID"
             type="password"
           />
           <span style={{ color: "red" }}>

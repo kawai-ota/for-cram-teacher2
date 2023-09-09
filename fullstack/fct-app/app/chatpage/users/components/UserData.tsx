@@ -9,7 +9,19 @@ interface UserDataProps {
   data: User;
 }
 
-const UserData: React.FC<UserDataProps> = ({ data }) => {
+async function fetchDetails() {
+  const res = await fetch("http://localhost:3000/api/post", {
+    next: {
+      revalidate: 10,
+    },
+  });
+  const data = await res.json();
+  return data.post;
+}
+
+const UserData: React.FC<UserDataProps> = async ({ data }) => {
+  // const posts = await fetchDetails();
+
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const handleClick = useCallback(() => {
@@ -17,7 +29,7 @@ const UserData: React.FC<UserDataProps> = ({ data }) => {
     axios
       .post("/api/conversations", { userId: data.id })
       .then((data) => {
-        router.push(`/detail/edit/${data.data.id}`);
+        router.push(`/chatpage/conversations/${data.data.id}`);
       })
       .finally(() => setIsLoading(false));
   }, [data, router]);
@@ -26,14 +38,14 @@ const UserData: React.FC<UserDataProps> = ({ data }) => {
       {isLoading && <LoadingModal />}
       <div
         onClick={handleClick}
-        className="w-full relative flex justify-between items-center space-x-3 bg-white mr-10 p-8 rounded-lg cursor-pointer border border-transparent transition duration-300 ease-in-out hover:border-black hover:shadow-sm"
-        style={{ width: "345px", height: "480px" }}
+        className="w-full relative flex justify-between items-center space-x-3 bg-gray-200 mr-10 p-8 rounded-lg cursor-pointer border border-transparent transition duration-300 ease-in-out hover:border-[#3EBCB5] hover:shadow-sm"
+        style={{ width: "300px", height: "505px" }}
       >
         <Avatar user={data} />
         <div className="min-w-0 flex-1">
           <div className="focus:outline-none">
             <div className="flex justify-between items-center mb-1">
-              <p className="text-sm font-medium text-gray-900">{data.name}</p>
+              <p className="text-xl text-gray-900 font-semibold">{data.name}</p>
             </div>
           </div>
         </div>
